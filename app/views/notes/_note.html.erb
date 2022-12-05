@@ -1,0 +1,32 @@
+<div id = "<%= dom_id note %>">
+<%= turbo_frame_tag "note"%>
+  <p class="my-5">
+    <strong class="block font-medium mb-1">Title:</strong>
+    <%= note.title %>
+  </p>
+
+  <p class="my-5">
+    <strong class="block font-medium mb-1">Content:</strong>
+    <%= note.content %>
+  </p>
+
+  <p class="my-5">
+    <strong class="block font-medium mb-1">User Email:</strong>
+    <%= note.user.email %>
+  </p>
+
+
+  <p class="my-5">
+    <strong class="block font-medium mb-1">image:</strong>
+    <%= image_tag(note.image, width: 100) if note.image.attached? %>
+  </p>    
+
+
+
+  <% if action_name != "show" %>
+    <%= button_to "Destroy this Note", note_path(note), method: :delete, class: "rounded-lg py-3 ml-2 px-5 bg-gray-100 inline-block font-medium" %>
+    <%= link_to "Show this note", note, data: {turbo_stream: "_top"}, class: "rounded-lg py-3 px-5 bg-gray-100 inline-block font-medium" %>
+    <%= link_to 'Edit this note', edit_note_path(note), class: "rounded-lg py-3 ml-2 px-5 bg-gray-100 inline-block font-medium" %>
+    <hr class="mt-6">
+  <% end %>
+
