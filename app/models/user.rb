@@ -6,4 +6,5 @@ class User < ApplicationRecord
          :lockable, :trackable
 
   has_many :notes
+  # has_secure_password
 end
