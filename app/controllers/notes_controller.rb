@@ -4,7 +4,6 @@ class NotesController < ApplicationController
 
   def index
     @notes = Note.where(user_id: current_user.id)
-    @users = User.all
   end
 
   def show
