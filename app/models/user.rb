@@ -6,5 +6,6 @@ class User < ApplicationRecord
          :lockable, :trackable
 
   has_many :notes
+  # validates :email, :password, presence: true
   # has_secure_password
 end

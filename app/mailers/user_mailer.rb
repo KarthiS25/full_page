@@ -1,6 +1,8 @@
-class UserMailer <ApplicationMailer
+class UserMailer < ApplicationMailer
 
     def run
-        mail(to: [ User.pluck(:email) ], subject: 'Test Send')
+      @user = User.first(:email)
+      @url = 'http://www.gmail.com'
+      mail(to: @user, subject: 'Test Send')
       end
 end
