@@ -5,7 +5,7 @@ ruby "3.1.3"
 
 # Bundle edge Rails instead: gem "rails", github: "rails/rails", branch: "main"
 gem "rails", "~> 7.0.4"
-gem 'rails_admin', '~> 3.0'
+# gem 'rails_admin', '~> 3.0'
 
 # The original asset pipeline for Rails [https://github.com/rails/sprockets-rails]
 gem "sprockets-rails"
@@ -78,4 +78,5 @@ group :test do
   gem "selenium-webdriver"
   gem "webdrivers"
 end
+gem "cssbundling-rails"
 gem "cssbundling-rails"
