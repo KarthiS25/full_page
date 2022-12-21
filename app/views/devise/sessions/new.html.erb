@@ -1,14 +1,5 @@
-<!DOCTYPE html>
-<html>
-<head>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<meta name="author" content="Yinka Enoch Adedokun">
-	<title>Login Page</title>
-	</head>
-<body>
-	<!-- Main Content -->
-  <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
+<%= stylesheet_link_tag "devise", "data-turbo-track": "reload"%>
+<%= form_for(resource, as: resource_name, url: session_path(resource_name), data: { turbo:false }) do |f| %>
 
 	<div class="container-fluid">
 		<div class="row col-md-12 main-content bg-success text-center">
@@ -63,5 +54,4 @@
   <!-- Footer -->
 </body>
 </html>
-
 

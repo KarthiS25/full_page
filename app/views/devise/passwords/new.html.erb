@@ -1,14 +1,5 @@
-<!DOCTYPE html>
-<html>
-<head>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<title>Forgot Password Page</title>
-
-</head>
-<body style="background-image:url('../picreact.jpg')">
-	<!-- Main Content -->
-  <%= form_for(resource, as: resource_name, url: password_path(resource_name), html: { method: :post }) do |f| %>
+<%= stylesheet_link_tag "devise", "data-turbo-track": "reload"%>
+<%= form_for(resource, as: resource_name, url: password_path(resource_name), html: { method: :post }) do |f| %>
   <% if resource.errors.any? %>
   <div id="error_explanation">
     <ul>
@@ -63,10 +54,6 @@
 		</div>
 	</div>
 	<% end %>
-  <!-- Footer -->
-</body>
-</html>
-
 <%= render "devise/shared/links" %>
 
 

@@ -1,4 +1,11 @@
+require "sidekiq/web"
 Rails.application.routes.draw do
+  
+  Sidekiq::Web.use(Rack::Auth::Basic) do |username, password|
+    username == "admin" && password == "admin"
+  end
+
+  mount(Sidekiq::Web => "/sidekiq")
   
   devise_for :users
   resources :notes, :users
