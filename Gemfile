@@ -14,7 +14,7 @@ gem "sprockets-rails"
 # gem "sqlite3", "~> 1.4"
 gem 'pg', '~> 1.4'
 gem "tailwindcss-rails"
-gem "letter_opener"
+gem "letter_opener", group: :development
 gem 'devise'
 gem 'dotenv-rails'
 # Use the Puma web server [https://github.com/puma/puma]
@@ -79,10 +79,11 @@ group :test do
   gem "webdrivers"
 end
 
+gem "pry-rails"
 gem "sidekiq"
 gem "sidekiq-scheduler"
 gem "sidekiq-cron"
 gem "redis", "~> 4.0"
-# gem "redis-namespace"
-# gem "cssbundling-rails"
+gem "redis-namespace"
+gem "roo"
 # gem "cssbundling-rails"

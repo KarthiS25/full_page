@@ -1,0 +1,8 @@
+.alert {
+text-align: center;
+    font-size: 23px;
+    color: black;
+    /* background: white; */
+    padding-bottom: 2%;
+    padding-top: 2%;
+}

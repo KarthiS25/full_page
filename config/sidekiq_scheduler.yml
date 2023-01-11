@@ -1,0 +1,16 @@
+default: &default
+  active_mailings:
+    class: ActiveMailingsWorker
+    cron: '*/10 * * * * * America/Phoenix'
+  scheduled_mailings:
+    class: ScheduledMailingsWorker
+    cron: '* * * * * America/Phoenix'
+
+development:
+  <<: *default
+
+staging:
+  <<: *default
+
+production:
+  <<: *default

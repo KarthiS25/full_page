@@ -1,4 +1,7 @@
-<div class="alert alert-warning alert-dismissible fade show" role="alert">
-    <%= notice %>
-    <%= alert %>
-</div>
+<%= stylesheet_link_tag "alert", "data-turbo-track": "reload"%>
+<% if notice %>
+  <p class="alert alert-success"><%= notice %></p>
+<% end %>
+<% if alert %>
+  <p class="alert alert-danger"><%= alert %></p>
+<% end %>

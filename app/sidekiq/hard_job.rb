@@ -1,3 +1,4 @@
+
 class HardJob
   include Sidekiq::Job
 
