@@ -5,3 +5,4 @@
 //= link controllers/index.js
 //= link_directory ../stylesheets .css
 //= link tailwind.css
+//= link devise.css

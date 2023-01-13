@@ -1,0 +1,34 @@
+<%= stylesheet_link_tag "devise", "data-turbo-track": "reload"%>
+<%= form_with( id:"article_form", model: article, class:"contents") do |form| %>
+
+    <% if article.errors.any? %>
+        <div id="error_explanation" class="bg-red-50 text-red-500 px-3 py-2 font-medium rounded-lg mt-3">
+            <h4><%= pluralize(article.errors.count, "error")%> prohibited this note from being saved:</h4>
+
+            <ul>
+            <% article.errors.each do |error| %>
+            <li><%= error.full_message %></li>
+            <% end %>
+            </ul>
+        </div>
+    <% end %>
+
+    <div class="my-5">
+        <%= form.label :title %><br/>
+        <%= form.text_field :title, class: "block shadow rounded-md border border-gray-200 outline-none px-3 py-2 mt-2 w-full" %>
+    </div>
+
+    <div class="my-5">
+        <%= form.label :content %><br/>
+        <%= form.text_area :content, rows: 4, class: "textarea" %>
+    </div>
+
+    <div>
+    <%= form.hidden_field :user_id, value: current_user.id %><br/>
+    </div>
+
+    <div class="inline">
+        <%= form.submit class: "rounded-lg py-3 px-5 bg-blue-600 text-white inline-block font-medium cursor-pointer" %>
+    </div>
+
+<% end %>

@@ -1,5 +1,7 @@
 require "sidekiq/web"
 Rails.application.routes.draw do
+  get 'home/index'
+  get 'homes/index'
   
   Sidekiq::Web.use(Rack::Auth::Basic) do |username, password|
     username == "admin" && password == "admin"
@@ -9,11 +11,12 @@ Rails.application.routes.draw do
   
   devise_for :users
   resources :notes, :users
+  resources :articles
 
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
 
   # Defines the root path route ("/")
   get 'admin' => 'admin#index'
-  root "notes#index"
+  root "home#index"
   # root "sessions#home"
 end

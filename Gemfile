@@ -82,7 +82,7 @@ end
 gem "pry-rails"
 gem "sidekiq"
 gem "sidekiq-scheduler"
-gem "sidekiq-cron"
+# gem "sidekiq-cron"
 gem "redis", "~> 4.0"
 gem "redis-namespace"
 gem "roo"

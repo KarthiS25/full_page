@@ -197,8 +197,6 @@ GEM
     rb-inotify (0.10.1)
       ffi (~> 1.0)
     redis (4.8.0)
-    redis-client (0.11.2)
-      connection_pool
     redis-namespace (1.10.0)
       redis (>= 4)
     regexp_parser (2.6.1)
@@ -250,18 +248,14 @@ GEM
       rexml (~> 3.2, >= 3.2.5)
       rubyzip (>= 1.2.2, < 3.0)
       websocket (~> 1.0)
-    sidekiq (7.0.2)
-      concurrent-ruby (< 2)
-      connection_pool (>= 2.3.0)
-      rack (>= 2.2.4)
-      redis-client (>= 0.11.0)
-    sidekiq-cron (1.9.0)
-      fugit (~> 1)
-      sidekiq (>= 4.2.1)
-    sidekiq-scheduler (4.0.2)
+    sidekiq (6.5.8)
+      connection_pool (>= 2.2.5, < 3)
+      rack (~> 2.0)
+      redis (>= 4.5.0, < 5)
+    sidekiq-scheduler (4.0.3)
       redis (>= 4.2.0)
       rufus-scheduler (~> 3.2)
-      sidekiq (>= 4)
+      sidekiq (>= 4, < 7)
       tilt (>= 1.4.0)
     sprockets (4.1.1)
       concurrent-ruby (~> 1.0)
@@ -329,7 +323,6 @@ DEPENDENCIES
   sass-rails (>= 3.2)
   selenium-webdriver
   sidekiq
-  sidekiq-cron
   sidekiq-scheduler
   sprockets-rails
   stimulus-rails
