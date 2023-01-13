@@ -1,6 +1,6 @@
 #!/usr/bin/env ruby
 require_relative "../config/boot"
 require "rake"
-# require "sidekiq/tasks"
-# task "sidekiq:setup" => :environment
+require "sidekiq/tasks"
+task "sidekiq:setup" => :environment
 Rake.application.run
