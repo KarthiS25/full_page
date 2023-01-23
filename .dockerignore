@@ -1,8 +1,6 @@
-fly.toml
-
 .git
 tmp
-!tmp/pids/.keep
+!tmp/pids
 log
 public/assets
 public/packs

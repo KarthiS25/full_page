@@ -1,10 +1,9 @@
-require 'sidekiq-scheduler'
+
 class HardJob
   include Sidekiq::Job
-  queue_as :default
 
-  def perform
+  def perform(name, count)
     # Do something
-    puts "Hello world!!"
+    puts "HardJob"
   end
 end

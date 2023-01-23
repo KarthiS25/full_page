@@ -13,6 +13,7 @@ gem "sprockets-rails"
 # Use sqlite3 as the database for Active Record
 # gem "sqlite3", "~> 1.4"
 gem 'pg', '~> 1.4'
+gem "tailwindcss-rails"
 gem "letter_opener", group: :development
 gem 'devise'
 gem 'dotenv-rails'
@@ -48,8 +49,8 @@ gem "bootsnap", require: false
 
 # Use Sass to process CSS
 # gem "sassc-rails"
+gem 'bootstrap-sass', '~> 3.3.6'
 gem 'sass-rails', '>= 3.2'
-# gem 'jquery-rails'
 
 # Use Active Storage variants [https://guides.rubyonrails.org/active_storage_overview.html#transforming-images]
 gem "image_processing", "~> 1.2"
@@ -81,11 +82,8 @@ end
 gem "pry-rails"
 gem "sidekiq"
 gem "sidekiq-scheduler"
-gem "sidekiq-cron"
+# gem "sidekiq-cron"
 gem "redis", "~> 4.0"
 gem "redis-namespace"
 gem "roo"
-gem "jsbundling-rails", "~> 1.1"
-gem "cssbundling-rails", "~> 1.1"
-
-gem 'spree', '~> 4.4'
+# gem "cssbundling-rails"
