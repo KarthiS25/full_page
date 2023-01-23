@@ -6,18 +6,15 @@
     <link rel="icon" href="/n_icon.png">
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
-<%# <link rel="stylesheet" href="https://cdn.simplecss.org/simple.css"> %>
-
-    
-
-<%# <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous"> %>
     <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
-    <%= stylesheet_link_tag "application.tailwind", "inter-font", "alert", "application", "data-turbo-track": "reload" %>
-    
     <%= javascript_importmap_tags %>
+    <%= javascript_include_tag "application", "data-turbo-track": "reload", defer: true %>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+
+
   </head>
 
-  <body style="background-image: url(<%= ENV['BACKGROUND_IMAGE'] %>)">
+  <body style="background-image: url(<%= ENV['BACKGROUND_IMAGE'] %>)">  
     <main class="container mx-auto mt-28 px-5 flex">
     <%# <p class="notice"><%= notice %></p>
     <%# <p class="alert"><%= alert %></p>
@@ -25,7 +22,7 @@
 
   <header>
   <nav>
-  <h1 style="text-align:center;font-size:40px">NoteBook taking application<h1>
+  <h1 style="text-align:center;font-size:35px">NoteBook taking application<h1>
   <% if user_signed_in? %>
     <%= button_to "Sign Out", destroy_user_session_path, method: :delete %>
   <% end %>

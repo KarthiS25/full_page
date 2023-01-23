@@ -5,4 +5,7 @@ class AdminController < ApplicationController
            redirect_to notes_path || articles_path
         end
     end
+
+    def show
+    end
 end

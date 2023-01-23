@@ -1,4 +1,4 @@
-# fly.toml file generated for nb-rails on 2022-12-13T17:08:56+05:30
+# fly.toml file generated for nb-rails on 2023-01-23T15:39:40+05:30
 
 app = "nb-rails"
 kill_signal = "SIGINT"
