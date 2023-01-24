@@ -1,9 +1,9 @@
-
+require 'sidekiq-scheduler'
 class HardJob
   include Sidekiq::Job
 
-  def perform(name, count)
+  def perform()
     # Do something
-    puts "HardJob"
+    puts "Hello sidekiq"
   end
 end
